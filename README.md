@@ -4,7 +4,7 @@ This is a simple web application built using Express.js and MongoDB that allows 
 
 
 
-**---------NOW THE APP IS ALSO HOSTED ON AWS TO CHECK THE WORKING OF OT CLICK HERE [](http://18.207.173.22:3000/)-----------------------------**
+**---------NOW THE APP IS ALSO HOSTED ON AWS TO CHECK THE WORKING OF IT  [CLICK HERE](http://18.207.173.22:3000/)-----------------------------**
 
 **------------------------------ >HOSTED ON RENDER [CHECK OUT THE WORKING APPLICATION](https://todolistbybhaskar.onrender.com) < --------------------------------------**
 
