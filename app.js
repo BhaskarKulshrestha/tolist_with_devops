@@ -13,14 +13,21 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 // MongoDB Connection - Use 'localhost' if MongoDB is running on the same EC2 instance
-mongoose.connect('mongodb://localhost:27017/todolistDB', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-}).then(() => {
-  console.log('MongoDB connected');
-}).catch(err => {
-  console.error('MongoDB connection error:', err);
-});
+// mongoose.connect('mongodb://localhost:27017/todolistDB', {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true
+// }).then(() => {
+//   console.log('MongoDB connected');
+// }).catch(err => {
+//   console.error('MongoDB connection error:', err);
+// });
+
+const mongoURI = process.env.MONGO_URI || "mongodb://localhost:27017/todoDB";
+
+mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => console.log("Connected to MongoDB"))
+    .catch(err => console.error("MongoDB connection error:", err));
+
 
 const itemsSchema = {
   name: String
